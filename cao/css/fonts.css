@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'FSAlbert';
+    src: url('../fonts/FSAlbert-Bold.eot');
+    src: url('../fonts/FSAlbert-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FSAlbert-Bold.woff2') format('woff2'),
+        url('../fonts/FSAlbert-Bold.woff') format('woff'),
+        url('../fonts/FSAlbert-Bold.ttf') format('truetype'),
+        url('../fonts/FSAlbert-Bold.svg#FSAlbert-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FS Albert';
+    src: url('../fonts/FSAlbert-Light.eot');
+    src: url('../fonts/FSAlbert-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FSAlbert-Light.woff2') format('woff2'),
+        url('../fonts/FSAlbert-Light.woff') format('woff'),
+        url('../fonts/FSAlbert-Light.ttf') format('truetype'),
+        url('../fonts/FSAlbert-Light.svg#FSAlbert-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FS Albert';
+    src: url('../fonts/FSAlbert-Bold_1.eot');
+    src: url('../fonts/FSAlbert-Bold_1.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FSAlbert-Bold_1.woff2') format('woff2'),
+        url('../fonts/FSAlbert-Bold_1.woff') format('woff'),
+        url('../fonts/FSAlbert-Bold_1.ttf') format('truetype'),
+        url('../fonts/FSAlbert-Bold_1.svg#FSAlbert-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FSAlbert';
+    src: url('../fonts/FSAlbert-Regular.eot');
+    src: url('../fonts/FSAlbert-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FSAlbert-Regular.woff2') format('woff2'),
+        url('../fonts/FSAlbert-Regular.woff') format('woff'),
+        url('../fonts/FSAlbert-Regular.ttf') format('truetype'),
+        url('../fonts/FSAlbert-Regular.svg#FSAlbert-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FSAlbert';
+    src: url('../fonts/FSAlbert-ExtraBold.eot');
+    src: url('../fonts/FSAlbert-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FSAlbert-ExtraBold.woff2') format('woff2'),
+        url('../fonts/FSAlbert-ExtraBold.woff') format('woff'),
+        url('../fonts/FSAlbert-ExtraBold.ttf') format('truetype'),
+        url('../fonts/FSAlbert-ExtraBold.svg#FSAlbert-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('../fonts/Apercu-Bold.eot');
+    src: url('../fonts/Apercu-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Apercu-Bold.woff2') format('woff2'),
+        url('../fonts/Apercu-Bold.woff') format('woff'),
+        url('../fonts/Apercu-Bold.ttf') format('truetype'),
+        url('../fonts/Apercu-Bold.svg#Apercu-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('../fonts/Apercu-Mono.eot');
+    src: url('../fonts/Apercu-Mono.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Apercu-Mono.woff2') format('woff2'),
+        url('../fonts/Apercu-Mono.woff') format('woff'),
+        url('../fonts/Apercu-Mono.ttf') format('truetype'),
+        url('../fonts/Apercu-Mono.svg#Apercu-Mono') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
