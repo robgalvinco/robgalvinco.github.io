@@ -53,7 +53,7 @@ title{
 	padding: 0px;
 }
 .main-header .navbar .navbar-brand img{
-	width:130px;
+	width:100px;
 }
 .main-header .navbar-nav .nav-link{
 	font-size: 18px;
@@ -457,19 +457,18 @@ title{
     margin: 0px;
     padding: 0px;
 }
-.course-tab-text h3{
-    font-family: 'Apercu';
-    font-weight: bold;
-    font-size: 40px;
-    color:#5EC4B5;
-    margin:0 0 5px 0;
-}
 .course-tab-text h2{
      font-family: 'FSAlbert';
     font-weight: bold;
     font-size: 28px;
     color:#231f20;
     margin:0 0 5px 0;
+}
+.course-tab-text h2 span{
+    font-family: 'Apercu';
+    font-weight: bold;
+    font-size: 20px;
+    color:#5EC4B5;
 }
 .course-tab-text p{
     font-family: 'FSAlbert';
@@ -490,19 +489,18 @@ title{
     margin:0px;
     padding: 0px;
 }
-.course-two-text h3{
-    font-family: 'Apercu';
-    font-weight: bold;
-    font-size: 40px;
-    color:#5EC4B5;
-    margin:0 0 5px 0;
-}
 .course-two-text h2{
      font-family: 'FSAlbert';
     font-weight: bold;
     font-size: 28px;
     color:#231f20;
     margin:0 0 5px 0;
+}
+.course-two-text h2 span{
+    font-family: 'Apercu';
+    font-weight: bold;
+    font-size: 20px;
+    color:#5EC4B5;
 }
 .course-two-text p{
     font-family: 'FSAlbert';
@@ -649,19 +647,18 @@ title{
     margin:0px;
     padding:0px;
 }
-.technique-text-area h3{
-    font-family: 'Apercu';
-    font-weight: bold;
-    font-size: 40px;
-    color:#5EC4B5;
-    margin:0 0 5px 0;
-}
 .technique-text-area h2{
      font-family: 'FSAlbert';
     font-weight: bold;
     font-size: 28px;
     color:#231f20;
     margin:0 0 5px 0;
+}
+.technique-text-area h2 span{
+    font-family: 'Apercu';
+    font-weight: bold;
+    font-size: 20px;
+    color:#5EC4B5;
 }
 .technique-text-area p{
     font-family: 'FSAlbert';
@@ -742,19 +739,18 @@ title{
     margin: 0px;
     padding: 0px;
 }
-.technique-col-text h3{
-    font-family: 'Apercu';
-    font-weight: bold;
-    font-size: 40px;
-    color:#5EC4B5;
-    margin:0 0 5px 0;
-}
 .technique-col-text h2{
      font-family: 'FSAlbert';
     font-weight: bold;
     font-size: 28px;
     color:#231f20;
     margin:0 0 5px 0;
+}
+.technique-col-text h2 span{
+    font-family: 'Apercu';
+    font-weight: bold;
+    font-size: 20px;
+    color:#5EC4B5;
 }
 .technique-col-text p{
     font-family: 'FSAlbert';
@@ -840,12 +836,8 @@ title{
 
 /* Logo section css Start */
 .logo-main-area{
-    margin:80px 0;
-    padding: 50px 0;
-    background-image: url('../images/cta.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    margin:80px 0 80px 0;
+    padding: 0px 0;
 }
 .logo-inner{
     margin:0px;
@@ -864,7 +856,16 @@ title{
     text-align: center;
 }
 .logo-inner ul li img{
-    width: 200px;
+    width: 180px;
+    padding: 0px;
+}
+.logo-inner ul li h2{
+    margin: 0px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'FSAlbert';
+    font-weight: bold;
+    color:#5EC4B5;
 }
 /* Logo section css End */
 
@@ -873,11 +874,11 @@ title{
 .price-main{
     margin:50px 0;
     padding: 0px;
-}
-.price-box-main{
     margin:0px;
     padding: 40px;
     background: #231f20;
+}
+.price-box-main{
 }
 .price-heading{
     margin: 0px;
@@ -981,29 +982,29 @@ title{
 
 /* Coa Start section css start */
 .coa-start{
-    margin:70px 0;
+    margin:30px 0 0 0;
     padding: 0px;
 }
 .coa-start-con{
     margin:0px;
-    padding: 50px;
-    border:2px solid #5EC4B5;
+    padding: 30px;
+    /* border:2px solid #5EC4B5; */
     text-align: center;
 }
 .coa-start-con h2{
     font-family: 'FSAlbert';
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 50px;
     color:#5EC4B5;
-    margin:0 0 20px 0;
+    margin:0 0 10px 0;
 }
 .coa-start-con p{
     font-size: 18px;
     line-height: 1.5em;
     font-family: 'FSAlbert';
     font-weight: normal;
-    color:#231f20;
+    color:#ffffff;
     max-width: 80%;
     margin: 0 auto;
 }
@@ -1031,23 +1032,9 @@ title{
 
 /* FAQ Section css Start */
 .faq-main{
-    margin: 70px 0;
+    margin: 0px;
     padding: 60px 0;
-    background: #231f20;
     position: relative;
-}
-.faq-main:after{
-    content: '';
-    position: absolute;
-    z-index: 120;
-    right: 0;
-    bottom: 0px;
-    width: 30%;
-    height: 100%;
-    background-image: url('../images/white.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom left;
 }
 .faq-heaidng{
     margin:0px;
@@ -1058,7 +1045,7 @@ title{
     font-family: 'Apercu';
     font-weight: bold;
     font-size: 40px;
-    color:#fff;
+    color:#5EC4B5;
     line-height: 50px;
     text-transform: uppercase;
 }
@@ -1068,7 +1055,7 @@ title{
 .faq-con-main{
     margin: 50px auto 0 auto;
     padding: 0px;
-    width:70%;
+    width:90%;
 }
 .faq-con-main .accordion-container{
   position: relative;
@@ -1076,11 +1063,16 @@ title{
   height: auto;
   margin: 10px auto;
 }
+/*section.faq-main .accordion-container {
+    display: flex;
+    flex-wrap: wrap;
+}*/
 .faq-con-main .set{
-  position: relative;
-  width: 100%;
-  height: auto;
-  background-color: #f5f5f5;
+    position: relative;
+    width: 100%;
+    padding: 4px;
+    height: auto;
+    margin-bottom: 19px;
 }
 .faq-con-main .set > a{
   display: block;
@@ -1088,13 +1080,14 @@ title{
   text-decoration: none;
   color: #231f20;
   font-weight: 600;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #5EC4B5;
   -webkit-transition:all 0.2s linear;
   -moz-transition:all 0.2s linear;
   transition:all 0.2s linear;
   font-family: 'Apercu';
   font-weight: bold;
   font-size: 18px;
+  background-color: #f5f5f5;
 }
 .faq-con-main .set > a i{
   float: right;
@@ -1126,13 +1119,10 @@ title{
 
 /* Call to Action section css start */
 .call-to-action{
-    margin:80px 0;
-    padding:0px;
-}
-.cta-bg-area{
+    margin:0px; 
     padding: 70px 0;
     background-image: url('../images/cta.png');
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -1181,10 +1171,101 @@ title{
 }
 /* Call to Action section css End */
 
+/* Courses sub menu css Start */
+.course-main-menu-section{
+    margin:50px 0;
+    padding: 0px;
+}
+.course-menu-tab{
+    margin:0px;
+    padding: 0px;
+}
+.course-menu-tab ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px 0 30px 0;
+    border-bottom: 4px solid #EDEDED;
+}
+.course-menu-tab ul li {
+    flex: 1;
+    margin-right: 30px;
+    position: relative;
+}
+.course-menu-tab ul li a{
+    display: block;
+}
+.course-menu-tab ul li a img {
+    margin-bottom: 15px;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.course-menu-tab ul li h3 {
+    font-family: 'FSAlbert';
+    font-weight: bold;
+    color: #5EC4B5;
+    font-size: 22px;
+}
+.course-menu-tab ul.tabs li.current {
+    position: relative;
+}
+.course-menu-tab ul.tabs li.current:after {
+    content: "";
+    position: absolute;
+    bottom: -29px;
+    left: 50%;
+    -ms-transform: translate(-50%,100%);
+    -webkit-transform: translate(-50%,100%);
+    transform: translate(-50%,100%);
+    width: 29px;
+    height: 16px;
+    background-image: url(../images/arrow.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.sub-menu-main{
+    margin: 30px 0;
+    padding: 0px;
+    display: none;
+    width: 100%;
+    transition: all ease-in-out 0.4s;
+}
+.sub-menu-main.open{
+    display: block;
+}
+.sub-menu-main ul{
+    display: flex;
+    align-items: center;
+    border:none;
+    padding: 0px;
+    margin:0px;
+}
+.sub-menu-main ul li{
+    flex: 1;
+    margin: 0px;
+}
+.sub-menu-main li a img{
+    width:150px !important;
+    height: auto !important;
+    object-fit: cover !important;
+}
+.sub-menu-main li h3{
+    font-family: 'FSAlbert';
+    font-weight: bold;
+    color: #231f20;
+    font-size: 18px;
+}
+/* Courses sub menu css End */
+
+
 /* Footer Section css Start */
 .footer-main{
     margin:0px;
-    padding: 50px 0;
+    padding: 30px 0;
     border-top:5px solid #5EC4B5;
 }
 .footer-con-main{
@@ -1248,3 +1329,75 @@ title{
     margin: 0 auto;
 }
 /* Footer Section css End */
+
+
+/* slider  */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .title-slide h2 {
+    margin: 0 0 12px 0;
+    font-family: 'FSAlbert';
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    color: #5EC4B5;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #3333335e;
+}
+.slide-slide .swiper-container {
+    padding-bottom: 45px;
+}
+span.swiper-pagination-bullet {
+    border-radius: 0;
+    width: 11px;
+    height: 11px;
+    background-color: #5ec4b5;
+}
+.slide-slide p {
+    font-family: 'FSAlbert';
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 28px;
+    color: #787878;
+    margin-bottom: 30px;
+}
+.slide-slide img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+section.slideopp .border {
+    border: 0 !important;
+    border-left: 7px dotted #442300 !important;
+    height: 100%;
+    position: relative;
+}
+section.slideopp .border img {
+    width: 28px;
+    position: absolute;
+    left: -17px;
+    top: 0;
+    background-color: #fff;
+    padding-bottom: 7px;
+}

@@ -36,6 +36,30 @@ $(document).ready(function() {
   });
 });
 
+var swiper = new Swiper('.slide-inner', {
+  slidesPerView: 7,
+  spaceBetween: 0,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+var swiper = new Swiper('.slide-inner1', {
+  slidesPerView: 7,
+  spaceBetween: 0,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+var swiper = new Swiper('.slide-inner2', {
+  slidesPerView: 7,
+  spaceBetween: 0,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
 
 // tab section jquery function
 
@@ -51,4 +75,14 @@ $(document).ready(function(){
     $("#"+tab_id).addClass('current');
   })
 
-})
+});
+
+// sub menu js
+
+$(document).ready(function(){
+  
+  $('ul.tabs li a').click(function(){
+    $(".sub-menu-main").toggleClass("open");
+  })
+
+});
