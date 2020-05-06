@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icons/send-color</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M20.6487742,2.06344803 C20.6777402,2.05260514 20.7071081,2.043152 20.7367748,2.03508859 C21.4803803,1.82865758 22.1713424,2.51961974 21.9649114,3.26322518 C21.956848,3.29289193 21.9473949,3.32225981 21.936552,3.35122581 L14.9438584,23.3303504 C14.6446647,24.1851894 13.4540222,24.2337645 13.0861885,23.4061385 L9.24239555,14.7576044 L0.593861534,10.9138115 C-0.23376449,10.5459778 -0.185189412,9.35533529 0.669649575,9.05614164 L20.6487742,2.06344803 Z M18.6085296,6.80568395 L11.1927471,14.2214665 L13.8893953,20.2889249 L18.6085296,6.80568395 Z M9.77853352,12.8072529 L17.1943161,5.39147039 L3.71107508,10.1106047 L9.77853352,12.8072529 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons/send" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon">
+            <use fill="#2A8DF3" xlink:href="#path-1"></use>
+            <use fill="#968DF5" xlink:href="#path-1"></use>
+            <use fill="#9165F7" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
