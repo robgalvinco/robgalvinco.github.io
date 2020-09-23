@@ -2728,12 +2728,12 @@ p {
 a {
   -webkit-transition: color 350ms ease;
   transition: color 350ms ease;
-  color: #316bff;
+  color: #CC0103;
   text-decoration: underline;
 }
 
 a:hover {
-  color: #1a4ccc;
+  color: #CC0103;
 }
 
 ul {
@@ -2764,7 +2764,7 @@ blockquote {
   border-left: 0px solid #000;
   border-radius: 16px;
   background-color: #f4f7ff;
-  color: #316bff;
+  color: #CC0103;
   font-size: 25px;
   line-height: 1.68em;
   font-weight: 700;
@@ -2815,7 +2815,7 @@ figcaption {
 }
 
 .bg-primary-1 {
-  background-color: #316bff;
+  background-color: #CC0103;
 }
 
 .bg-primary-2 {
@@ -2827,7 +2827,7 @@ figcaption {
 }
 
 .bg-secondary-2 {
-  background-color: #1a4ccc;
+  background-color: #CC0103;
 }
 
 .bg-neutral-300 {
@@ -2902,7 +2902,7 @@ figcaption {
   padding: 100px 68px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  background-color: #316bff;
+  background-color: #CC0103;
 }
 
 .sidebar-navigation {
@@ -2928,7 +2928,7 @@ figcaption {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 18px;
-  background-color: #316bff;
+  background-color: #CC0103;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
 }
@@ -2954,14 +2954,14 @@ figcaption {
 
 .styleguide-link:hover {
   background-color: #f4f7ff;
-  color: #316bff;
+  color: #CC0103;
 }
 
 .styleguide-link.w--current {
   background-color: #f4f7ff;
   -webkit-transition: color 300ms ease, background-color 300ms ease;
   transition: color 300ms ease, background-color 300ms ease;
-  color: #316bff;
+  color: #CC0103;
   font-weight: 700;
 }
 
@@ -3084,7 +3084,7 @@ figcaption {
 }
 
 .typography-details {
-  color: #316bff;
+  color: #CC0103;
   font-weight: 500;
 }
 
@@ -3126,7 +3126,7 @@ figcaption {
 .button-primary {
   padding: 24px 40px;
   border-radius: 4px;
-  background-color: #316bff;
+  background-color: #CC0103;
   box-shadow: 0 6px 13px 0 rgba(9, 11, 44, 0.1);
   -webkit-transition: box-shadow 350ms ease, background-color 350ms ease, -webkit-transform 350ms ease;
   transition: box-shadow 350ms ease, background-color 350ms ease, -webkit-transform 350ms ease;
@@ -3141,7 +3141,7 @@ figcaption {
 }
 
 .button-primary:hover {
-  background-color: #1a4ccc;
+  background-color: #CC0103;
   box-shadow: 1px 1px 6px 0 rgba(9, 11, 44, 0.1), 0 3px 6px 0 rgba(9, 11, 44, 0.1);
   -webkit-transform: scale(0.95);
   -ms-transform: scale(0.95);
@@ -3173,7 +3173,7 @@ figcaption {
 
 .button-primary.button-white {
   background-color: #fff;
-  color: #316bff;
+  color: #CC0103;
 }
 
 .button-primary.small-header {
@@ -3237,8 +3237,8 @@ figcaption {
 }
 
 .button-secondary:hover {
-  border-color: #316bff;
-  background-color: #316bff;
+  border-color: #CC0103;
+  background-color: #CC0103;
   -webkit-transform: scale(0.95);
   -ms-transform: scale(0.95);
   transform: scale(0.95);
@@ -3319,11 +3319,11 @@ figcaption {
 }
 
 .nav-link:hover {
-  color: #316bff;
+  color: #CC0103;
 }
 
 .nav-link.w--current {
-  color: #316bff;
+  color: #CC0103;
   font-weight: 700;
 }
 
@@ -3332,7 +3332,7 @@ figcaption {
 }
 
 .nav-link.transparent-header:hover {
-  color: #316bff;
+  color: #CC0103;
 }
 
 .special-typography-1 {
@@ -3370,7 +3370,7 @@ figcaption {
 .licenses-hero {
   padding-top: 90px;
   padding-bottom: 90px;
-  background-color: #316bff;
+  background-color: #CC0103;
 }
 
 .section {
@@ -3738,7 +3738,7 @@ figcaption {
 
 .input:focus,
 .input.-wfp-focus {
-  border-color: #316bff;
+  border-color: #CC0103;
   color: #1a2447;
   font-size: 18px;
 }
@@ -3777,7 +3777,7 @@ figcaption {
 }
 
 .input.newsletter:focus {
-  border-color: #316bff;
+  border-color: #CC0103;
   color: #1a2447;
   font-size: 16px;
 }
@@ -3925,7 +3925,7 @@ figcaption {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 100px;
-  background-color: #316bff;
+  background-color: #CC0103;
   box-shadow: 0 2px 10px 0 rgba(49, 107, 255, 0.19);
   color: #fff;
 }
@@ -4103,7 +4103,7 @@ figcaption {
 .menu-button-mobile {
   padding: 26px 42px;
   border-radius: 4px;
-  background-color: #316bff;
+  background-color: #CC0103;
   color: #fff;
   line-height: 20px;
   font-weight: 700;
@@ -4199,7 +4199,7 @@ figcaption {
 
 .subtitle.about-author {
   margin-bottom: 5px;
-  color: #316bff;
+  color: #CC0103;
   font-size: 14px;
   line-height: 1.286em;
   letter-spacing: 0.18em;
@@ -4218,12 +4218,12 @@ figcaption {
 }
 
 .subtitle.card-ticket:hover {
-  color: #316bff;
+  color: #CC0103;
 }
 
 .subtitle.previous-confs {
   margin-bottom: 0px;
-  color: #316bff;
+  color: #CC0103;
   font-size: 18px;
   line-height: 1.111em;
   letter-spacing: 0.1em;
@@ -4241,7 +4241,7 @@ figcaption {
 }
 
 .text-color-accent {
-  color: #316bff;
+  color: #CC0103;
 }
 
 ._2-buttons {
@@ -4909,7 +4909,7 @@ figcaption {
 }
 
 .title.resource:hover {
-  color: #316bff;
+  color: #CC0103;
 }
 
 .speakers-section {
@@ -5044,7 +5044,7 @@ figcaption {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 28px;
-  background-color: #316bff;
+  background-color: #CC0103;
   box-shadow: 0 4px 24px 0 rgba(26, 28, 71, 0.26);
   text-align: center;
 }
@@ -5536,11 +5536,11 @@ figcaption {
 }
 
 .schedule-tab-link:hover {
-  border-bottom-color: #316bff;
+  border-bottom-color: #CC0103;
 }
 
 .schedule-tab-link.w--current {
-  border-bottom: 4px solid #316bff;
+  border-bottom: 4px solid #CC0103;
   background-color: transparent;
   -webkit-transition: color 300ms ease;
   transition: color 300ms ease;
@@ -5589,7 +5589,7 @@ figcaption {
   width: 17px;
   height: 2px;
   margin-right: 10px;
-  background-color: #316bff;
+  background-color: #CC0103;
 }
 
 .accent-line.speaker {
@@ -5597,7 +5597,7 @@ figcaption {
 }
 
 .accent-line.speaker-page {
-  background-color: #316bff;
+  background-color: #CC0103;
 }
 
 .accent-line.previous-confs {
@@ -5663,7 +5663,7 @@ figcaption {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  background-color: #316bff;
+  background-color: #CC0103;
 }
 
 .benefits-content-wrapper {
@@ -5752,8 +5752,8 @@ figcaption {
 }
 
 .left-arrow:hover {
-  border-color: #316bff;
-  background-color: #316bff;
+  border-color: #CC0103;
+  background-color: #CC0103;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -5808,8 +5808,8 @@ figcaption {
 }
 
 .right-arrow:hover {
-  border-color: #316bff;
-  background-color: #316bff;
+  border-color: #CC0103;
+  background-color: #CC0103;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -5833,7 +5833,7 @@ figcaption {
   width: 40px;
   height: 4px;
   margin-bottom: 17px;
-  background-color: #316bff;
+  background-color: #CC0103;
 }
 
 .latest-news-wrapper {
@@ -5938,7 +5938,7 @@ figcaption {
   padding: 8px;
   border-radius: 6px;
   background-color: #f4f7ff;
-  color: #316bff;
+  color: #CC0103;
   font-size: 14px;
   line-height: 1em;
   font-weight: 700;
@@ -5957,7 +5957,7 @@ figcaption {
 }
 
 .badge.card-event:hover {
-  background-color: #316bff;
+  background-color: #CC0103;
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
@@ -5975,7 +5975,7 @@ figcaption {
 }
 
 .badge.card-blog:hover {
-  background-color: #316bff;
+  background-color: #CC0103;
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
@@ -5986,7 +5986,7 @@ figcaption {
   margin-bottom: 13px;
   margin-left: 0px;
   padding: 12px 20px;
-  background-color: #316bff;
+  background-color: #CC0103;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -5996,7 +5996,7 @@ figcaption {
 .badge.blog-post {
   margin-left: 0px;
   padding: 12px 20px;
-  background-color: #316bff;
+  background-color: #CC0103;
   -webkit-transition: -webkit-transform 350ms ease;
   transition: -webkit-transform 350ms ease;
   transition: transform 350ms ease;
@@ -6027,7 +6027,7 @@ figcaption {
 }
 
 .badge.event:hover {
-  background-color: #316bff;
+  background-color: #CC0103;
   color: #fff;
 }
 
@@ -6103,8 +6103,8 @@ figcaption {
 }
 
 .footer-social-media-link-wrapper:hover {
-  border-color: #316bff;
-  background-color: #316bff;
+  border-color: #CC0103;
+  background-color: #CC0103;
   color: #fff;
 }
 
@@ -6262,8 +6262,8 @@ figcaption {
 }
 
 .social-media-link-wrapper:hover {
-  border-color: #316bff;
-  background-color: #316bff;
+  border-color: #CC0103;
+  background-color: #CC0103;
   color: #fff;
 }
 
@@ -6402,8 +6402,8 @@ figcaption {
 }
 
 .pagination-button:hover {
-  border-color: #316bff;
-  background-color: #316bff;
+  border-color: #CC0103;
+  background-color: #CC0103;
   color: #fff;
 }
 
@@ -6468,7 +6468,7 @@ figcaption {
 }
 
 .blog-post-author-name:hover {
-  color: #316bff;
+  color: #CC0103;
 }
 
 .blog-post-latest-articles-grid {
@@ -6764,7 +6764,7 @@ figcaption {
   margin-left: 6px;
   padding: 12px 18px;
   border-radius: 6px;
-  background-color: #316bff;
+  background-color: #CC0103;
   color: #fff;
   font-size: 14px;
   line-height: 1em;
@@ -6795,7 +6795,7 @@ figcaption {
 }
 
 .select:focus {
-  border-color: #316bff;
+  border-color: #CC0103;
   color: #1a2447;
 }
 
@@ -6847,7 +6847,7 @@ figcaption {
 }
 
 .quantity:focus {
-  border-color: #316bff;
+  border-color: #CC0103;
   color: #1a2447;
 }
 
@@ -6871,7 +6871,7 @@ figcaption {
   display: block;
   width: 100%;
   border-radius: 4px;
-  background-color: #316bff;
+  background-color: #CC0103;
   -webkit-transition: background-color 350ms ease, -webkit-transform 350ms ease;
   transition: background-color 350ms ease, -webkit-transform 350ms ease;
   transition: transform 350ms ease, background-color 350ms ease;
@@ -6882,7 +6882,7 @@ figcaption {
 }
 
 .add-to-cart:hover {
-  background-color: #1a4ccc;
+  background-color: #CC0103;
   -webkit-transform: scale(0.95);
   -ms-transform: scale(0.95);
   transform: scale(0.95);
@@ -6928,7 +6928,7 @@ figcaption {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  background-color: #316bff;
+  background-color: #CC0103;
 }
 
 .why-assist-icon {
@@ -7062,7 +7062,7 @@ figcaption {
 }
 
 .event-speaker-wrapper:hover {
-  color: #316bff;
+  color: #CC0103;
 }
 
 .event-speaker-image {
@@ -7112,7 +7112,7 @@ figcaption {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #316bff;
+  background-color: #CC0103;
 }
 
 .contact-us-content-wrapper {
@@ -7154,7 +7154,7 @@ figcaption {
 }
 
 .message:focus {
-  border-color: #316bff;
+  border-color: #CC0103;
   color: #1a2447;
   font-size: 18px;
 }
@@ -7212,7 +7212,7 @@ figcaption {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 24px;
-  background-color: #316bff;
+  background-color: #CC0103;
 }
 
 .achievements-grid {
@@ -7540,7 +7540,7 @@ figcaption {
 }
 
 .button-play:hover {
-  background-color: #316bff;
+  background-color: #CC0103;
   box-shadow: 0 10px 60px 0 #03041d;
   -webkit-transform: scale(0.95);
   -ms-transform: scale(0.95);
@@ -7628,7 +7628,7 @@ figcaption {
 }
 
 .category-title-accent {
-  color: #316bff;
+  color: #CC0103;
 }
 
 .ticket-link {
@@ -7675,7 +7675,7 @@ figcaption {
 .product-ticket-title-link {
   -webkit-transition: color 350ms ease;
   transition: color 350ms ease;
-  color: #316bff;
+  color: #CC0103;
   font-size: 20px;
   text-decoration: none;
 }
@@ -7699,7 +7699,7 @@ figcaption {
 }
 
 .cart-quantity-card:focus {
-  border-color: #316bff;
+  border-color: #CC0103;
   color: #1a2447;
 }
 
@@ -7716,7 +7716,7 @@ figcaption {
 }
 
 .remove-text:hover {
-  color: #316bff;
+  color: #CC0103;
 }
 
 .cart-price {
@@ -7735,7 +7735,7 @@ figcaption {
 }
 
 ._404-subtitle {
-  color: #316bff;
+  color: #CC0103;
   font-size: 53px;
 }
 
@@ -7940,13 +7940,13 @@ figcaption {
 }
 
 .conference-tab-link:hover {
-  color: #316bff;
+  color: #CC0103;
 }
 
 .conference-tab-link.w--current {
   background-color: #fff;
   box-shadow: 0 4px 18px 0 rgba(49, 107, 255, 0.1);
-  color: #316bff;
+  color: #CC0103;
 }
 
 .resources-tab-pane {
@@ -8216,7 +8216,7 @@ figcaption {
     transform: scale(0.95);
   }
   .menu-button-mobile.w--open {
-    background-color: #316bff;
+    background-color: #CC0103;
   }
   .shadow {
     position: fixed;
