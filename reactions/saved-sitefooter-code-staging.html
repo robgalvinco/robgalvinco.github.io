@@ -1,0 +1,853 @@
+<script>
+    var last_lesson = null;
+    var loaded = false; 
+        $(function() {
+            if(typeof(CoursePlayerV2) !== 'undefined') {
+                CoursePlayerV2.on('hooks:contentDidChange', function(data) {
+                    last_lesson = data;
+                    loaded = true;
+                });
+            }
+        });
+    
+    </script>
+    
+    <!-- can remove everyting below here -->
+    
+    
+    <script type="text/javascript" src="https://s3.amazonaws.com/thinkific-import-development/205311/confettiKit-191111-190127.js"></script>
+    <script type="text/javascript" src="https://chancejs.com/chance.min.js"></script>
+    
+    <script>
+    var shoot_confetti = function(){
+    new confettiKit({
+                position: chance.pickone(["bottomLeftRight", "topLeftRight"]),
+                    confettiCount: chance.integer({ min: 50, max: 70 }),
+                    angle: chance.integer({ min: 45, max: 90 }),
+                    startVelocity: chance.integer({ min: 40, max: 85 }),
+                    spread:chance.integer({ min: 25, max: 65 }) ,
+                    colors: [
+                            '#ffe3e8',
+                            '#000',
+                            '#da1d72',
+                            '#EE8D77',
+                        ],                
+                    elements: {
+                        'confetti': {
+                            direction: 'down',
+                            rotation: true
+                        },
+                        'star': {
+                            count: chance.integer({ min: 5, max: 15 }),
+                            direction: 'down',
+                            rotation: true
+                        },
+                        'ribbon': {
+                            count: chance.integer({ min: 5, max: 15 }),
+                            direction: 'down',
+                            rotation: true
+                        }
+                        
+                    }
+                });  
+                
+    }    
+    
+    
+    </script>
+    
+    
+    <script>
+        $(function() {
+            
+            if(typeof(CoursePlayerV2) !== 'undefined') {
+                console.log("init player events");
+                CoursePlayerV2.on('hooks:enrollmentWasCompleted', function(data) {
+                    //console.log(data);
+                    shoot_confetti();
+                });
+            }
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Chelsea+Market&family=Gruppo&display=swap" rel="stylesheet">
+    
+    <style>
+    .course-card__lesson-count {
+        display: none;
+    }
+    .course-card__details>* {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    </style>
+    
+    
+    
+    <script>
+        console.log("site footer code");
+    </script>
+    
+    <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=6568" async></script>
+    
+    
+    <script>
+    $(function() {
+        if(Thinkific.current_user == null){
+            $('#beamerSelector').hide()
+        }
+    });
+    </script>
+    
+    <section class="helpshelf-main-area">
+        <div class="helpshelf-round-main ">
+            <a href="javascript:void(0)" id="help-btn" class="helpshelf-button">
+                <img src="https://cdn-themes.thinkific.com/244754/346580/znPL1vftQjK5FT31o4i7_close-img.png" class="close-img">
+                <img src="https://cdn-themes.thinkific.com/244754/346580/sEy6SkzsRwmKfMWaWf6L_icons8-ball-point-pen.svg" class="chat-img">
+                
+            </a>
+        </div>
+        <div class="help-shelf-main-shadow">
+        <div class="helpshelf-con-main">
+            <div class="helpshelf-inner-content">
+                <div class="help-header-con">
+                    <div class="help-header-inner">
+                        <div class="help-img-area">
+                            <div class="help-img-inner">
+                                <img src="https://cdn-themes.thinkific.com/244754/346580/sEy6SkzsRwmKfMWaWf6L_icons8-ball-point-pen.svg">
+                            </div>
+                        </div> 
+                        <div class="help-title-main">
+                            <div class="help-title-inner">
+                                <h2><span id="lesson-name"></span></h2>
+                                <a href="javascript:void:(0)" id ="mobile-close">
+                                    <svg class="svg-inline--fa fa-times fa-w-12" aria-hidden="true" data-prefix="fahs" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M217.5 256l137.2-137.2c4.7-4.7 4.7-12.3 0-17l-8.5-8.5c-4.7-4.7-12.3-4.7-17 0L192 230.5 54.8 93.4c-4.7-4.7-12.3-4.7-17 0l-8.5 8.5c-4.7 4.7-4.7 12.3 0 17L166.5 256 29.4 393.2c-4.7 4.7-4.7 12.3 0 17l8.5 8.5c4.7 4.7 12.3 4.7 17 0L192 281.5l137.2 137.2c4.7 4.7 12.3 4.7 17 0l8.5-8.5c4.7-4.7 4.7-12.3 0-17L217.5 256z"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="help-scroll-area">
+                    <div class="help-video-content">
+                        <h3>YOUR NOTES</h3>
+                        <div class="comment">
+                            <textarea id="note-lesson" class="textinput" placeholder=""></textarea>
+                        </div>                    
+                        
+                        <p class="save-status"></p>
+                    
+                    </div>
+                
+                    <div class="help-bottom-con">
+                        <div class="help-bottom-innerr ">
+                            <h3>OTHER LESSON NOTES</h3>
+                            <div class="other-lessons"></div>
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="help-bottom-button-main">
+                    <a href="javascript:void(0)"  class="contact-btn"><span class="iconrg-heart-o"></span></a>
+                    <a href="javascript:void(0)"  class="contact-btn">Feedback</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <style>
+    @font-face {
+      font-family: 'icorobgalvin';
+      src:  url('https://s3.amazonaws.com/thinkific-import-development/205311/icorobgalvin-200406-161055.eot?aqkzoz');
+      src:  url('https://s3.amazonaws.com/thinkific-import-development/205311/icorobgalvin-200406-161055.eot?aqkzoz#iefix') format('embedded-opentype'),
+        url('https://s3.amazonaws.com/thinkific-import-development/205311/icorobgalvin-200406-161055.ttf?aqkzoz') format('truetype'),
+        url('https://s3.amazonaws.com/thinkific-import-development/205311/icorobgalvin-200406-161055.woff?aqkzoz') format('woff'),
+        url('https://s3.amazonaws.com/thinkific-import-development/205311/icorobgalvin-200406-161055.svg?aqkzoz#icorobgalvin') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+    }
+    
+    [class^="iconrg-"], [class*=" iconrg-"] {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'icorobgalvin' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+    
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .iconrg-heart-o:before {
+      content: "\f08a";
+    }
+    .iconrg-pen:before {
+      content: "\e900";
+    }
+    .iconrg-pencil:before {
+      content: "\e905";
+    }
+    .iconrg-bubbles4:before {
+      content: "\e970";
+    }
+    .iconrg-star-empty:before {
+      content: "\e9d7";
+    }
+    .iconrg-star-full:before {
+      content: "\e9d9";
+    }
+    .iconrg-heart:before {
+      content: "\e9da";
+    }
+    .shake {
+      animation: shake 2s ease infinite;
+    }
+    @keyframes shake {
+        0%, 100% {transform: translateX(0);}
+        10%, 30%, 50%, 70%, 90% {transform: translatey(-10px);}
+        20%, 40%, 60%, 80% {transform: translatey(10px);}
+    }
+    .helpshelf-main-area{
+        display:none;
+        margin:0px;
+        padding:0px;
+        position:relative;
+    }
+    .helpshelf-round-main{
+        margin:0px;
+        padding:0px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 2147483647;
+    }
+    .helpshelf-round-main.left-side{
+        left:20px;
+    }
+    .help-scroll-area{
+        margin:0px;
+        padding:0px;
+        /*height:650px;*/
+        overflow-y:scroll;
+        max-height: 70vH;
+    }
+    .helpshelf-button{
+        background: #FF447E;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        height:60px;
+        width:60px;
+        border-radius:100%;
+        box-shadow: rgba(0,0,0,0.06)0px 1px 6px 0,rgba(0,0,0,0.16)0px 2px 32px 0;
+    }
+    .round-chat{
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        border-radius: 100%;
+        position: absolute;
+        top: -11px;
+        left: -10px;
+    }
+    .round-chat p{
+        margin:0px;
+        font-size:16px;
+        font-weight:bold;
+        color:#fff;
+    }
+    .helpshelf-button .close-img{
+        width:16px;
+        display:none;
+    }
+    .helpshelf-button .chat-img{
+        max-width:100%;
+        height:auto;
+        padding: 8px;
+    }
+    .help-shelf-main-shadow{
+        
+    }
+    .helpshelf-con-main{
+        background: #fff;
+        color: #313d4d;
+        font-family: 'Open Sans',sans-serif !important;
+        margin: 0 20px 0 20px;
+        position: fixed;
+        right: 45px;
+        bottom: 0px;
+        width: 420px;
+        z-index: 999;
+        height: 90%;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .helpshelf-con-main.left-side{
+        left:45px;
+    }
+    .helpshelf-con-main.open{
+       visibility: visible;
+        opacity: 1; 
+    }
+    .helpshelf-inner-content{
+        margin:0px;
+        padding:17px 20px 25px;
+        background:#fff;
+        border-radius: 11px;
+        border: solid 1px rgba(202,205,211,0.5);
+        box-shadow: -8px 8px 0 -2px rgba(234,235,237,0.5), 40px 0 70px rgba(234,235,237,0.4);
+        background: #fff;
+    }
+    .help-header-con{
+        margin:0px;
+        padding:0px;
+    }
+    .help-header-inner{
+        margin:0px;
+        padding:0px;
+        display:flex;
+        align-items:center;
+    }
+    .help-img-area{
+        margin:0px;
+        padding:0px 0px;
+        flex: 0 0 10%;
+        max-width:10%;
+    }
+    .help-img-inner{
+        margin:0px;
+        padding:0px;
+        height:40px;
+        width:40px;
+        border-radius: 50%;
+        background: #FF447E;
+    }
+    .help-img-inner img{
+        max-width:100%;
+        height:auto;
+        padding: 8px;
+    }
+    .help-title-main{
+        margin:0px;
+        padding:0 15px;
+        flex:0 0 80%;
+        max-width:80%;
+    }
+    .help-title-inner{
+        margin:0px;
+        padding:0px;
+    }
+    .help-title-inner h2{
+        margin:0px;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 25px;
+        color:#ff447e;
+    }
+    .help-video-content{
+        margin:20px 0 0 0;
+        padding:0px
+    }
+    .help-video-inner{
+        margin:0px 0 15px 0;
+        padding:0px;
+    }
+    .help-video-inner iframe{
+        width:100%;
+        height:200px;
+    }
+    .help-bottom-con{
+        margin:0px;
+        padding:0px;
+    }
+    .help-bottom-innerr{
+        margin:0px;
+        padding:0px;
+    }
+    .help-bottom-block-main{
+        padding: 9px;
+        overflow: auto;
+        border: solid 1px rgba(202,205,211,0.5);
+        border-radius: 15px;
+        margin-bottom: 15px;
+        background: #fff;
+        transition: border-color 150ms ease-out;
+        display:flex;
+        align-items:center;
+        cursor:pointer;
+    }
+    .help-bottom-block-main:hover{
+        box-shadow: rgba(202,205,211,0.3) 0 0 25px;
+    }
+    .help-bottom-left{
+        padding:0 15px;
+    }
+    .help-video-content h3,.help-bottom-innerr h3{
+        font-size: 16px;
+        line-height: 27px;
+        font-weight: 600;
+        margin: 0 0 5px;
+        color: #ff447e;
+    }
+    .help-inner-img-bot{
+        margin:0px;
+        padding:0px;
+        height:50px;
+        width:50px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:rgba(96.75,189.0,243.75,0.08);
+        border-radius:9px;
+    }
+    .help-inner-img-bot svg {
+        fill: #f00 !important;
+        height: 60px;
+    }
+    .help-right-con{
+        margin:0px;
+        padding:0px 15px;;
+    }
+    .help-right-con h3{
+        margin:0px;
+        font-weight: 600;
+        color: #313d4d;
+        font-size: 12px;
+        /*line-height: 21px;*/
+        line-height: normal;
+    }
+    .help-right-con h5 {
+        margin: 0px;
+        font-weight: 600;
+        color: #ccc;
+        font-size: 9px;
+        line-height: normal;
+    }
+    .help-right-con p{
+        color: #6f7680;
+        font-weight: 400;
+        margin-bottom: 0;
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .help-bottom-innerr a{
+        color:inherit;
+        text-decoration:none;
+    }
+    .help-bottom-button-main{
+        margin:20px 0;
+        padding:0px;
+        display:flex;
+    }
+    .help-bottom-button-main .contact-btn{
+        background: #ff447e;
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        text-align: center;
+        border: 0;
+        border-radius: 7px;
+        padding: 8px 6px 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 23px;
+        margin: 0 5px;
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+    .help-bottom-button-main .contact-btn:hover{
+        background:#ff6d9a;
+    }
+    .helpshelf-button.img-div .chat-img{
+        display:none;
+    }
+    .helpshelf-button.img-div .close-img{
+        display:block;
+    }
+    #mobile-close{
+     display:none;   
+    }
+    @media screen and (max-width:575px){
+      .helpshelf-con-main{
+          width:100%;
+          right:0;
+          top:0px;
+          margin:0px;
+      } 
+      .helpshelf-con-main.left-side {
+        left: 0px;
+    }
+      .help-img-area{
+          display:none;
+      }
+      .help-bottom-block-main{
+          padding:10px 0px;
+      }
+      .helpshelf-inner-content {
+        margin: 0px;
+        padding: 17px 10px 17px 10px;
+        background: #fff;
+        border-radius: 9px;
+    }
+    .helpshelf-button.img-div{
+        display:none;
+    }
+    .help-scroll-area {
+        max-height: 90vH;
+    }
+    #mobile-close{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    #mobile-close svg{
+        height:20px;
+        color:#ff447e;
+    }
+    }
+    
+    
+    .comment {
+        float: left;
+        width: 100%;
+        height: auto;
+    }
+    .textinput {
+        float: left;
+        width: 100%;
+        min-height: 35vH;
+        outline: none;
+        resize: none;
+        border: 1px solid grey;
+        font-size: 12px;
+    }
+    .save-status{
+        font-size: 8px;
+        color: #ccc;
+        text-align:right;
+    }
+    </style>
+    
+    
+    <script>
+    $("#help-btn").click(function(){
+      $(".helpshelf-con-main").toggleClass("open");
+      $(this).toggleClass("img-div");
+    });
+    
+    $("#mobile-close").click(function(){
+      $(".helpshelf-con-main").removeClass("open");
+    });
+    </script>
+    
+    
+    
+    <script>
+        var courseid = "";
+        var lessonid = "";
+        var site = window.location.host;
+        var noteObject = {};
+        var lessonName = "";
+        var courseName = "";
+        var chapterName = "";
+        var oldVal = "";
+        var notes = [];
+        
+        function userRegistered( user )
+        {
+          console.log( "user has been registered" );
+            $( "#note-lesson" ).on("change keyup paste", function() {
+                var currentVal = $(this).val();
+                if(currentVal == oldVal) {
+                    return; //check to prevent multiple simultaneous triggers
+                }
+            
+                oldVal = currentVal;
+                
+              saveNote();
+            });      
+        }
+        
+        function userLoggedIn( user )
+        {
+          console.log( "user has logged in" );
+            $( "#note-lesson" ).on("change keyup paste", function() {
+                var currentVal = $(this).val();
+                if(currentVal == oldVal) {
+                    return; //check to prevent multiple simultaneous triggers
+                }
+            
+                oldVal = currentVal;
+                
+              saveNote();
+            });      
+    
+        }
+        
+        function gotError( err ) // see more on error handling
+        {
+          console.log(err);
+          console.log( "error message - " + err.message );
+          console.log( "error code - " + err.statusCode );
+        }
+    
+        function savedObject( object )
+        {
+          console.log( "saved object",object );
+          $(".save-status").text("Changes saved");
+          noteObject = object;
+        }
+    
+        function loadNote(){
+            console.log("Loading note");
+            var whereClause = "courseid = '"+courseid+"' AND lessonid='"+lessonid+"' AND site='"+site+"'";
+            var queryBuilder = Backendless.DataQueryBuilder.create().setWhereClause( whereClause );
+            Backendless.Data.of( "notes" ).find( queryBuilder )
+                .then( function( found ) {
+                    console.log("found",found);
+                    if(found.length ==0){
+                        noteObject = {};
+                        noteObject.courseid = courseid;
+                        noteObject.lessonid = lessonid;
+                        noteObject.site = site;
+                        noteObject.notes = "";
+                        $("#note-lesson").val(noteObject.notes);
+                        
+                    } else {
+                        noteObject = found[0];
+                        $("#note-lesson").val(noteObject.notes);
+                    }
+                })
+                .catch( function( fault ) {
+                    console.log("error",fault);
+                    noteObject.courseid = courseid;
+                    noteObject.lessonid = lessonid;
+                    noteObject.site = site;
+                    noteObject.notes = "";
+                    $("#note-lesson").val(noteObject.notes);
+                });
+    
+    
+        }    
+        
+        function loadOtherNotes(){
+            console.log("Loading other notes");
+            var whereClause = "courseid = '"+courseid+"' AND lessonid!='"+lessonid+"' AND site='"+site+"'";
+            var queryBuilder = Backendless.DataQueryBuilder.create().setWhereClause( whereClause );
+            queryBuilder.setSortBy( "updated DESC");
+            Backendless.Data.of( "notes" ).find( queryBuilder )
+                .then( function( found ) {
+                    console.log("found",found);
+                    if(found.length ==0){
+                        $(".other-lessons").html("");
+                    } else {
+                        notes.length = 0;
+                        notes = found;
+                        var html = "";
+                        for (i = 0; i < notes.length; i++) {
+                            var note = notes[i];
+                            html += '<div class="other-note" data-url="'+note.url+'"><div class="help-bottom-block-main"><div class="help-bottom-left"><div class="help-inner-img-bot"><span class="iconrg-pen"></span></div></div><div class="help-right-con"><h5>'+note.chapterName+'</h5><h3>'+note.lessonName+'</h3></div></div></div>';
+                        }
+                        $(".other-lessons").html(html);
+                        //click handler
+                        $(".other-note").click(function(){
+                            var lessonUrl = $(this).attr("data-url");
+                            $('a.course-player__content-item__link[href="'+lessonUrl+'"]').click();
+                        })
+    
+                    }
+                })
+                .catch( function( fault ) {
+                    console.log("error",fault);
+    
+                });
+    
+    
+        }    
+            
+        
+        function saveNote(){
+            console.log("saving note");
+            $(".save-status").text("Saving...");
+            noteObject.notes = $("#note-lesson").val();
+            noteObject.url = window.location.pathname;
+            noteObject.courseName = courseName;
+            noteObject.chapterName = chapterName;
+            noteObject.lessonName = lessonName;
+            
+            //if first save then do a blocking call to ensure a save
+            if(typeof(noteObject.objectId) == "undefined"){
+                $(".save-status").text("Saving...");
+                noteObject = Backendless.Data.of( "notes" ).saveSync( noteObject );
+                $(".save-status").text("Changes saved");
+            } else {
+                Backendless.Data.of( "notes" ).save( noteObject )
+                    .then(  savedObject )
+                    .catch( gotError );             
+            }
+               
+        }    
+        $(function() {
+            
+            if(typeof(CoursePlayerV2) !== 'undefined') {
+                $(".helpshelf-main-area").show();
+                // init backend
+                var APP_ID = '3B584AC8-3E0E-5D0B-FF51-983507FC9D00';
+                var API_KEY = 'EE8A8B78-0B99-4659-AC7C-157BC6C8ECC0';
+                
+                Backendless.initApp(APP_ID, API_KEY);
+                var login = Thinkific.current_user.id.toString();
+                var password = "password";
+                Backendless.UserService.login( login, password, true )
+                 .then( userLoggedIn  )
+                .catch( function(err){
+                    console.log(err);
+                    console.log( "error message - " + err.message );
+                    console.log( "error code - " + err.statusCode );                
+                    console.log("Registering user");
+                    var user = new Backendless.User();
+                    user.thinkificid = login;
+                    user.password = password;
+                    user.email = Thinkific.current_user.email;
+                    user.name = Thinkific.current_user.first_name + " " + Thinkific.current_user.last_name;
+                    
+                    Backendless.UserService.register( user ).then( userRegistered ).catch( gotError );                
+                } );        
+    
+                          
+                console.log("starting player events");
+                CoursePlayerV2.on('hooks:contentDidChange', function(data) {
+                    console.log("Custom Content Changed", data);
+                    courseid = data.course.id;
+                    courseName = data.course.name;
+                    lessonid = data.lesson.id;
+                    lessonName = data.lesson.name;
+                    chapterName = data.chapter.name;
+                    $("#lesson-name").text(lessonName);
+                    loadNote();
+                    loadOtherNotes();
+                });
+            }
+        });
+    </script> 
+    
+    
+    <script src="//api.backendless.com/sdk/js/latest/backendless.js"></script>
+    
+    <script>
+    $(function() {
+        $(".course-card__price strong").filter(function () {
+            return $(this).text() == 'Free';
+        }).text('No Cost');
+    });
+    </script>
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/9f0c6acc13/UntitledProject/style.css">
+    
+    <script>(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+    0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+    for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+    MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+    mixpanel.init("1e5fbd5b532e1a0b250d5a6c269c0805")</script>
+    
+    <style>
+      .student-dashboard__form  a[href="/collections"] { display:none;}
+    </style>
+    
+    
+    
+    <style>
+    .course-card__body .course-card__category {
+        display: none;
+    }
+    </style>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="text/javascript">
+      (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+      ;r.type="text/javascript";r.async=true
+      ;r.src="https://cdn.amplitude.com/libs/amplitude-4.5.2-min.gz.js"
+      ;r.onload=function(){if(e.amplitude.runQueuedFunctions){
+      e.amplitude.runQueuedFunctions()}else{
+      console.log("[Amplitude] Error: could not load SDK")}}
+      ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+      ;function s(e,t){e.prototype[t]=function(){
+      this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+      var o=function(){this._q=[];return this}
+      ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+      ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+      ;return this}
+      ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+      ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+      ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut",
+      "setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify",
+      "clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","logEventWithTimestamp",
+      "logEventWithGroups","setSessionId","resetSessionId"]
+      ;function v(e){function t(t){e[t]=function(){
+      e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+      for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+      e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+      ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+      ;e.amplitude=n})(window,document);
+    
+      amplitude.getInstance().init("afa214796512ee7db9f33c42544a6a51");
+    </script>
+    
+    
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158804001-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-158804001-2');
+    </script>
+    <script>
+        $(function() {
+            amplitude.getInstance().setUserId(Thinkific.current_user.email);
+            if(typeof(CoursePlayerV2) !== 'undefined') {
+                CoursePlayerV2.on('hooks:contentWasCompleted', function(data) {
+                    console.log(data);
+                    amplitude.getInstance().logEvent('contentWasCompleted', data);
+                });
+            }
+        });
+    </script> 
