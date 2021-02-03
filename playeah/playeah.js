@@ -9,22 +9,30 @@ window._playeah = {
             lottie:"https://assets8.lottiefiles.com/packages/lf20_agk79xb1.json",
             heading:"You are taking off like a rocket!!",
             copy:"Keep up the great work!!! Don't stop now - keep er going",
-            cta_text:"",
-            cta_link:"",
-            played: false
-
+            cta_text:"Cta Text",
+            cta_link:"#",
+            played: false,
+            color_bg: "#0000FF",
+            color_heading: "#FFFFFF",
+            color_copy: "#FFFFFF",
+            color_cta_bg : "#000000",
+            color_cta_text : "#00FF00"
         },
         {
             id:"1146281",
-            type:"modal",
+            type:"push",
             progress: 30,
             lottie:"https://assets5.lottiefiles.com/datafiles/zc3XRzudyWE36ZBJr7PIkkqq0PFIrIBgp4ojqShI/newAnimation.json",
             heading:"You unlocked a gift!!",
             copy:"What are you waiting for??? Open it up",
             cta_text:"Claim Gift",
             cta_link:"#",
-            played: false
-
+            played: false,
+            color_bg: "#0000FF",
+            color_heading: "#FFFFFF",
+            color_copy: "#FFFFFF",
+            color_cta_bg : "#000000",
+            color_cta_text : "#00FF00"
         },
 
         {
@@ -36,8 +44,10 @@ window._playeah = {
             copy:"",
             cta_text:"",
             cta_link:"",
-            played: false
-
+            played: false,
+            color_bg: "",
+            color_heading: "",
+            color_copy: ""
         }
     ]
 };
@@ -54,6 +64,7 @@ window._playeah = {
 
     const show_celebration = function(index){
         var celebration = celebrations[index];
+        console.log(celebration);
         if(!celebration.played){
             if(celebration.type=="full"){
                 _playeah_lottie=document.querySelector("lottie-player");
@@ -63,7 +74,7 @@ window._playeah = {
                 _playeah_lottie.load(celebration.lottie);
                 celebrations[index].played = true;            
             }
-            if(celebration.type=="modal" || celebration.type=="push"){
+            if(celebration.type=="modal" || celebration.type=="push" || celebration.type=="nudge"){
                 //set modal content
                 if(celebration.heading != ""){
                     $(".playeah-modal-heading").show();
@@ -87,12 +98,63 @@ window._playeah = {
                 //load lottie
                 var lottie_html = '<lottie-player  src="'+celebration.lottie+'" background="transparent"  speed="1"  style="height: 100%;"  loop  autoplay></lottie-player>';
                 $(".playeah-modal-image").html(lottie_html);
-                if(celebration.type=="push"){
-                    UIkit.offcanvas($("#playeah-push")).show()
-                } else {
-                    UIkit.modal($("#playeah-modal")).show()
-                }
-                
+                console.log(celebration.type);
+                switch(celebration.type) {
+                    case "push":
+                        if(celebration.color_bg != ""){
+                            style_html = '<style>#playeah-push .uk-offcanvas-bar{background-color:'+celebration.color_bg+';}</style>';
+                        }
+                        if(celebration.color_heading != ""){
+                            style_html += '<style>#playeah-push .playeah-modal-heading{color:'+celebration.color_heading+'!important;}</style>';
+                        }
+                        if(celebration.color_copy != ""){
+                            style_html += '<style>#playeah-push .playeah-modal-copy{color:'+celebration.color_copy+'!important;}</style>';
+                        }
+                        if(celebration.color_cta_bg != "" && celebration.color_cta_text !=""){
+                            style_html += '<style>#playeah-push .uk-button-primary {background-color: '+celebration.color_cta_bg+' !important;color: '+celebration.color_cta_text+' !important;}</style>';
+                        }
+                        style_html += '<style>#playeah-push .uk-offcanvas-bar .uk-close{color:'+celebration.color_copy+'!important;}'
+
+                        $("#playeah-style").html(style_html);
+                        UIkit.offcanvas($("#playeah-push")).show();
+                        break;
+                    case "modal":
+                        if(celebration.color_bg != ""){
+                            style_html = '<style>.uk-modal-dialog{background-color:'+celebration.color_bg+';}</style>';
+                        }
+                        if(celebration.color_heading != ""){
+                            style_html += '<style>.uk-modal-dialog .playeah-modal-heading{color:'+celebration.color_heading+'!important;}</style>';
+                        }
+                        if(celebration.color_copy != ""){
+                            style_html += '<style>.uk-modal-dialog .playeah-modal-copy{color:'+celebration.color_copy+'!important;}</style>';
+                        }
+                        if(celebration.color_cta_bg != "" && celebration.color_cta_text !=""){
+                            style_html += '<style>.uk-modal-dialog .uk-button-primary {background-color: '+celebration.color_cta_bg+' !important;color: '+celebration.color_cta_text+' !important;}</style>';
+                        }
+                        $("#playeah-style").html(style_html);
+
+                        UIkit.modal($("#playeah-modal")).show();
+                        break;
+                    case "nudge":
+                        console.log("nudge");
+                        var style_html = "";
+                        if(celebration.color_bg != ""){
+                            style_html = '<style>.uk-notification-message{background-color:'+celebration.color_bg+';}</style>';
+                        }
+                        if(celebration.color_heading != ""){
+                            style_html += '<style>.uk-notification-message .playeah-modal-heading{color:'+celebration.color_heading+'!important;}</style>';
+                        }
+                        if(celebration.color_copy != ""){
+                            style_html += '<style>.uk-notification-message .playeah-modal-copy{color:'+celebration.color_copy+'!important;}</style>';
+                        }
+                        $("#playeah-style").html(style_html);
+                        //var nudge_html = '<div class="uk-flex"><span class="playeah-nudge-image">'+ lottie_html+'</span><div><h2 class="uk-text-primary">'+celebration.heading+'</h2><p>'+celebration.copy+'</p></div></div>';
+                        var nudge_html = '<span class="playeah-nudge-image">'+ lottie_html+'</span><div><h2 class="uk-text-primary uk-text-center playeah-modal-heading">'+celebration.heading+'</h2><p class="uk-text-center playeah-modal-copy">'+celebration.copy+'</p></div>';
+                        UIkit.notification(nudge_html, {pos: "bottom-right", timeout: 8000});
+                        break;
+                    default:
+                      // code block
+                }                
                 celebrations[index].played = true;            
             }
 
@@ -149,11 +211,16 @@ window._playeah = {
    }    
    const inject_html= function(){
        console.log("injecting html");
-       var html = '<lottie-player id="playeah" background="transparent" speed="1" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 9999999999;" autoplay=""></lottie-player>';
-        $("body").append(html)       
+       var html = '<div id="playeah-style"></div><lottie-player id="playeah" background="transparent" speed="1" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 9999999999;" autoplay=""></lottie-player>';
+       var html_modal = '<div id="playeah-modal" class="uk-flex-top" uk-modal><div class="uk-modal-dialog uk-margin-auto-vertical uk-modal-body"><div class="playeah-modal-image uk-flex uk-flex-center"></div> <button class="uk-modal-close-outside" type="button" uk-close></button><h2 class="uk-modal-title uk-text-center playeah-modal-heading uk-text-primary"></h2><p class="playeah-modal-copy uk-text-center uk-text-secondary"></p><p class="uk-text-center"> <a class="uk-button uk-button-primary playeah-modal-cta" ></a></p></div></div>';
+       var html_push = '<div id="playeah-push" uk-offcanvas="flip:true; mode: push; overlay: false"><div class="uk-offcanvas-bar uk-background-default"><button class="uk-offcanvas-close" type="button" uk-close></button><div class="playeah-modal-image uk-flex uk-flex-center"></div> <button class="uk-modal-close-outside" type="button" uk-close></button><h2 class="uk-modal-title uk-text-center playeah-modal-heading uk-text-primary"></h2><p class="playeah-modal-copy uk-text-center uk-text-secondary"></p><p class="uk-text-center"> <a class="uk-button uk-button-primary playeah-modal-cta" ></a></p></div></div>';
+       $("body").append(html);       
+       $("body").append(html_modal);       
+       $("body").append(html_push);       
+
    }
    const inject_styles = function(){
-       var style = '<style>#playeah{display:none;}.playeah-modal-image{height:200px;width: 200px;margin-left: auto!important;margin-right: auto!important;}</style>';
+       var style = '<style>#playeah{display:none;}.playeah-nudge-image{height:100px;width: 100px;}.playeah-modal-image{height:200px;width: 200px;margin-left: auto!important;margin-right: auto!important;}</style>';
        $("body").prepend(style);       
    }
    const find_and_play = function(progress, courseid){
