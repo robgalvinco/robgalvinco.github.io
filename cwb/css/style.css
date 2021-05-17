@@ -1,0 +1,1032 @@
+/*======================
+workflow: Casting Workbook
+Theme version : 1.0.0
+========================*/
+
+/*======================
+Global style start here
+========================*/
+:root{ 
+	--dark-blue : #040F1C;
+	--white: #FFFFFF;
+	--sky:#02B8F9;
+	--black:#000000;
+	--label: #364866;
+	--pink: #FF1870;
+	--light: #F5F5F5;
+	--input-border:#D1D5DD;
+	--input-border-dark: #C9CED6;
+	--overlay:rgba(11, 28, 47, 0.6);
+	--blue-text:#0A1F44;
+	--darkhr:#343D47;
+	--light-sky:#53B5F3;
+	--light-bg :#eef0f5;
+	--font :'Open Sans', sans-serif;
+}
+	body , html {
+		font-family: var(--font);
+		line-height: normal;
+		letter-spacing: normal;
+		font-size: 16px;
+	}
+	a {
+	    color: var(--sky , #02B8F9);
+	}
+	a:hover , a:focus , a:active {
+		text-decoration:none;
+		color: var(--sky , #02B8F9);
+	}
+	@media (min-width: 1230px){
+		.container, .container-lg, .container-md, .container-sm, .container-xl {
+		    max-width: 1200px;
+		}
+	}
+/*======================
+Global style End here
+========================*/
+
+/*======================
+Header style start here
+========================*/
+	header.header {
+		background: var(--dark-blue , #040F1C);
+	}
+	header.header  .navbar {
+		min-height: 80px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.navbar-nav .nav-link{
+		font-weight: bold;
+		font-size: 100%;
+		color: var(--white , #ffffff);
+		
+	}
+	.navbar-expand-lg .navbar-nav .nav-link{
+		padding-left: 0.625rem;
+		padding-right: 0.625rem; 
+		min-height: 80px;
+		display: flex;
+		align-items: center;
+	}
+	.navbar-expand-lg .navbar-nav .nav-link:hover {
+		color: var(--sky , #02B8F9);
+	}
+	.navbar-nav .active .nav-link{
+		color: var(--sky , #02B8F9);
+		position: relative;
+	}
+	.navbar-nav .active .nav-link:after {
+		height: 3px;
+		width: 100%;
+		bottom: 0;
+		content: "";
+		background: var(--sky , #02B8F9);
+		left: 0;
+		position: absolute;
+	} 
+
+
+/*======================
+Header style end here
+========================*/
+/*======================
+Hero section style start here
+========================*/
+
+	.hero-section {
+		display: flex;
+		width: 100%;
+		min-height: 40.938rem;
+		padding: 3.75rem 0;
+		color: var(--white , #ffffff);
+	}
+	.grey-gradient {
+		background: url(../images/hero-lesson.png) no-repeat right 0 ;
+		
+	}
+	@media(min-width: 1440px){
+		.grey-gradient {
+			background-size: cover;
+		}
+	}
+	.grey-gradient:after{
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(180deg, rgba(11, 28, 47, 0.48) 0%, rgba(11, 28, 47, 0.8) 100%);
+	}
+	.z1 {
+		z-index: 11;
+	}
+	.hero-content .previous_course{
+		display: flex;
+		color: var(--white , #ffffff);
+		font-size: 100%;
+		margin-bottom: 50px;
+		align-items: center;
+	}
+	.hero-content .previous_course i {
+		margin-right: 8px;
+	}
+	.hero-content h1 {
+		margin: 0;
+		font-size: 300%;
+		font-weight: 400;
+		color: var(--white , #ffffff);
+	}
+	.hero-content .author {
+		color:var(--white , #ffffff);
+		font-size: 100%;
+		margin-top: 0.75rem;
+		margin-bottom: 0;
+	}
+	.sm-divider {
+		display: block;
+		width: 3rem;
+		height: 0.125rem;
+		background: #FCC304;
+		content: "";
+		position: relative;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	.course_description {
+		font-size: 175%;
+		line-height: 2.375rem;
+		color: var(--white , #ffffff);
+		margin-top: 0;
+		margin-bottom: 1.125rem;
+
+	}
+	.pricing h3{
+		margin-top: 0;
+		margin-bottom: 1.375rem;
+		font-size: 275%;
+		display: flex;
+		align-items: center;
+		font-weight: 700;
+
+	}
+	.pricing h3 span {
+		font-size: 36.364%;
+		margin-left:0.9rem;
+	}
+	.btn-group-lg>.btn, .btn-lg {
+		padding: 0.625rem 2.063rem;
+		border-radius: 0.375rem;
+		font-size: 112.5%;
+		font-weight: 700;
+	}
+    .btn {
+      border-radius:0.375rem !important;
+      font-weight:700;
+}
+	.btn-primary {
+		background: var(--sky , #02B8F9);
+		color: var(--white , #ffffff);
+		border-color: var(--sky , #02B8F9);
+		border-width:0.125rem;
+	}
+	.btn-primary:hover , .btn-primary:focus , .btn-primary:active {
+		background: var(--white , #ffffff);
+		color: var(--sky , #02B8F9);
+		border-color: var(--sky , #02B8F9);
+	}
+	.btn-link , .btn-link:hover , .btn-link:focus {color: var(--sky , #02B8F9);}
+	.notice {
+		margin-top:1.25rem;
+		font-weight: 400;
+		font-size: 87.5%;
+		display: flex;
+	}
+	.position-auto {
+		left: :auto;
+		right: auto;
+	}
+/*======================
+Hero section style end here
+========================*/
+
+/*======================
+featured grid section style start here
+========================*/
+.feature-section {
+	display: flex;
+	width: 100%;
+	padding: 3.75rem 0;
+	background: var(--dark-blue , #040F1C);
+}
+.feature-box h3{
+	color: var(--white , #ffffff);
+	font-size: 175%;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+.feature-box p {
+	margin:0;
+	font-size: 100%;
+	color: #BCC2C9;
+	line-height: 1.375rem;
+}
+
+/*======================
+featured grid section style end here
+========================*/
+
+/*======================
+Course Curriculum section style start here
+========================*/
+
+.course-section{
+	    padding: 3.75rem 0;
+}
+
+.course-section h3{
+	font-size:181.25%;
+color: var(--black , #000000);
+}
+
+.course-section ul li{
+	border:0;
+}
+
+.course-column ul li i{
+	margin-right: 0.625rem;
+	font-size: 100%;
+	color: var(--sky , #02B8F9);
+
+}
+.course_title_area {
+    max-width: 40%;
+    width: 100%;
+}
+
+.video-button{
+font-size : 87.5%;
+padding:0.25rem 1.375rem;
+border-radius:0.375rem;
+}
+
+.third-column .list-group-item{
+padding: .40rem 1.25rem;
+}
+.course-column li{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+/*======================
+Course Curriculum section style end here
+========================*/
+/*======================
+Testimonial section style start here
+========================*/
+.testimonial-section {
+	padding: 3.75rem 0;
+	background: var(--dark-blue , #040F1C);
+}
+.title-area h3 {
+	color: var(--white , #ffffff);
+	font-size: 175%;
+	margin: 0
+}
+.testimonial-slide {
+	display: flex !important;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center !important;
+	color: var(--white , #ffffff);
+}
+.cl_img {
+	height: 5.875rem;
+	width: 5.875rem;
+	border-radius: 100%;
+	overflow: hidden;
+	margin:1.813rem 0;
+}
+.cl_detail {
+	width: 100%;
+	max-width: 23.125rem !important
+}
+.cl_detail h4 {
+	margin: 0;
+	font-size: 125%;
+	font-weight: 700;
+}
+.cl_detail h6 {
+	margin: 0 0 1.813rem;
+	font-size: 100%;
+	font-weight: 400;
+}
+.cl_detail  p {
+	color: var(--light , #F5F5F5);
+	font-size: 100%;
+	font-weight: 400;
+	margin: 0;
+}
+.testimonial-section .slick-prev, .testimonial-section .slick-next {
+	height: 1.813rem;
+	width: 1.813rem;
+}
+.testimonial-section .slick-prev:before, .testimonial-section .slick-next:before  {
+	content: "";
+}
+.testimonial-section .slick-prev {
+	left:0;
+	background: url(../images/Prev.svg) no-repeat 0 0 !important;
+	opacity: 1 !important;
+	z-index: 11;
+}
+.testimonial-section .slick-next {
+	right:0;
+	background: url(../images/Next.svg) no-repeat 0 0 !important;
+	opacity: 1 !important;
+}
+/*======================
+Testimonial section style end here
+========================*/
+/*======================
+About instructor style start here
+========================*/
+.about-instructor {
+	padding: 3.75rem 0;	
+}
+.about-instructor h6{
+  font-weight: bold;
+  font-size: 75%;
+  line-height: 1rem;
+  letter-spacing: 0.1em;
+  color: #53627C;
+  margin: 0  0 1.125rem;
+}
+.about-instructor h3{
+  font-weight: 400;
+  font-size: 175%;
+  line-height: 2rem;
+  color: var(--blue-text);
+  margin: 0  0 1.125rem;
+}
+.about-instructor p {
+  margin: 0  0 1.125rem;
+  font-size: 100%;
+  line-height: 1.375rem;
+  color: #53627C;
+}
+.pkg_area {
+  display:flex;
+  padding:3.25rem 1.625rem 1.875rem;
+  flex-direction:column;
+  background: #F1F2F4;
+  border-radius: 6px;
+}
+.pkg_area h5{
+  margin:0 0 0.313rem;
+  font-weight: normal;
+  font-size: 100%;
+  line-height: 1.375rem;
+  color: var(--blue-text);  
+}
+.pkg_area strong{
+  font-weight: bold;
+  font-size: 100%;
+  line-height: 1.375rem;
+  color: var(--blue-text);
+  margin-bottom:1.25rem;
+}
+
+/*======================
+About instructor style end here
+========================*/
+/*======================
+Recommanded section style start here
+========================*/
+.recommanded-courses {
+	padding: 3.75rem 0;
+	background: var(--dark-blue , #040F1C);
+}
+.rec_box {
+	display:flex;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	max-height:278px;
+	overflow:hidden;
+}
+.rec_box  img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+.over-content  {
+	background: var(--overlay);
+	width:100%;
+	left:0;
+	bottom:0;
+	padding:0 1.875rem ;
+	display: flex;
+	flex-direction: column;
+	height: 110px;
+	align-items: flex-start;
+	justify-content: center;
+}
+.over-content a h4{
+	font-weight: bold;
+	font-size: 125%;
+	line-height: 1.688rem;
+	color: var(--white , #ffffff);
+	margin: 0 0 0.25rem;
+}
+.over-content a h5{
+	margin: 0;
+	font-weight: normal;
+	font-size: 100%;
+	line-height: 1.375rem;
+	color: var(--white , #ffffff);
+}
+
+/*======================
+Recommanded section style end here
+========================*/
+
+/*======================
+Footer style start here
+========================*/
+footer.footer {
+	padding: 3.75rem 0;
+	background: var(--dark-blue , #040F1C);
+}
+footer.footer hr {
+	border-color:var(--darkhr);
+	margin:0 0 1.938rem;
+}
+.footer ul {
+	list-style:none;
+	padding:0;
+	margin:0 0 2rem;
+	display: flex;
+	flex-direction: column;
+}
+.footer ul li a , .footer p {
+	font-size: 100%;
+	line-height: 1.25rem;	
+	color: var(--white , #ffffff);
+	margin: 0 0 0.5rem;
+	display:flex;
+}
+.footer p {
+	margin-bottom: 2rem;
+}
+
+/*======================
+Footer style start here
+========================*/
+
+/*======================
+login page css start here
+========================*/
+
+.login-form {
+	background: var(--dark-blue , #040F1C);
+	padding:5.188rem 0;
+	min-height:calc(100vh - 80px);
+}
+.login-box h3{
+	font-size:112.5%;
+	font-weight: 700;
+	text-align: center;
+	color: var(--blue-text);
+		
+}
+
+
+.login-box h3:after{
+	content:''; 
+	display:block; 
+	width:130px; 
+	height:4px; 
+	background:var(--sky , #02B8F9); 
+	margin:0 auto;
+	margin-top:15px;
+}
+
+.login-box{
+	background: var(--white , #ffffff);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	padding:1.925rem 1.25rem 1.25rem;
+	border-top: 0.375rem solid var(--sky , #02B8F9);
+	width: 100%;
+	max-width: 400px;
+}
+
+
+
+.login-box label{
+	  margin-top: 1rem;
+	  font-weight: 600;
+	  color: var(--label , #364866);
+}
+
+.login-box button{
+	  margin-top: 1.5rem;
+	  font-weight: 700;
+	  margin-bottom: 0;
+}
+.form-control {
+	display: flex;
+	width:100%;
+	height: 35px;
+	background: var(--white , #ffffff);
+	border: 1px solid var(--input-border , #D1D5DD);
+	box-sizing: border-box;
+	border-radius: 4px;
+	align-items:center;
+	padding: 0 1rem;
+}
+
+.started-link a{
+	color: var(--sky , #02B8F9);
+	text-decoration: underline;
+}
+
+.login-form  .started-link{
+margin-top: 2.2rem;
+font-weight: 700;
+margin-bottom:1.625rem;
+font-size: 100%;
+}
+.login-box .forgot-link{
+	font-weight: 700;
+	font-size: 87.5%;
+	text-decoration-line: underline;
+	color: var(--label , #364866);
+	margin-top:0.5rem;
+}
+.smaller-links a {
+	font-size: 75%;
+	letter-spacing: 0.374px;
+
+	/* neutral/grey-200 */
+
+	color: #E1E4E8;
+}
+/*======================
+login page css style end here
+========================*/
+/*======================
+Signup page css start here
+========================*/
+
+.signup-form {
+	background: var(--dark-blue , #040F1C);
+	padding:5.188rem 0;
+	min-height:calc(100vh - 80px);
+}
+
+.signup-form h3 {
+	color: var(--white , #ffffff);
+	font-weight: bold;
+	font-size: 175%;
+	line-height: 2.125rem;
+	color: var(--white , #ffffff);
+	margin: 0 0 1.313rem;
+}
+.title-slogan{
+	font-size: 125%;
+	line-height: 1.75rem;
+	text-align: center;
+	color: var(--white , #ffffff);
+	margin: 0 0 4.875rem;
+}
+.opt_box {
+	background: var(--white , #ffffff);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+	border-top: 0.375rem solid var(--sky , #02B8F9); 
+	border-radius:0.25rem;
+	padding:1.563rem 1.25rem;
+}
+.opt_box.pink {
+	border-color: var(--pink , #FF1870);
+}
+.btn.pink {
+	background: var(--pink , #FF1870);
+	border-color: var(--pink , #FF1870);
+}
+.btn.pink:hover ,  .btn.pink:focus , .btn.pink:active {
+	color: var(--pink , #FF1870);
+	background: var(--white , #ffffff)	
+}
+.opt_box  h4{
+	font-weight: bold;
+	font-size: 125%;
+	line-height: 1.75rem;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: var(--blue-text);
+	margin: 0 0 0.5rem;
+}
+.opt_box   p{
+	font-size: 87.5%;
+	line-height: 1.188rem;
+	text-align: center;
+	color: #53627C;
+}
+.aready-member {
+	margin-top: 2.375rem;
+}
+.aready-member h5 {
+	color: var(--white , #ffffff);
+	font-weight: 700;
+	margin: 0 0 3.125rem;
+	font-size: 100%;
+}
+.aready-member  p {
+	margin-top: 0;
+	font-size: 87.5%;
+	line-height: 1.188rem;
+	text-align: center;
+	color: var(--white , #ffffff);
+
+}
+.text-bold {
+	font-weight: 700;
+}
+/*======================
+Signup page css style end here
+========================*/
+
+/*======================
+Checkout page css style start here
+========================*/
+.checkout-section {
+	background: url(../images/background-image-lori.jpg) no-repeat right 0;	
+	padding:6.125rem 0;	
+	background-size: cover;
+	min-height: calc(100vh - 80px);
+	position: relative;
+}
+.checkout-section:after {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(11, 28, 47, 0.48) 0%, rgba(11, 28, 47, 0.8) 100%);
+	content: "";
+}
+
+.cart-box {
+	display: flex;
+	width: 100%;
+	box-shadow: 0px 24px 20px rgba(4, 15, 28, 0.2);
+	border-radius: 6px;
+	background: var(--white , #ffffff);
+	padding: 2.5rem 1.875rem;
+	position: relative;
+	z-index: 11;
+	flex-direction: column;
+	max-width: 535px;
+}
+.cart-box > h3 {
+	font-weight: 700;
+	font-size: 250%;
+	color: var(--black , #000000);
+	margin: 0;
+	line-height: normal;
+}
+.cart-box > span {
+	color: var(--dark-blue , #040F1C);
+	font-size: 112.5%;
+	font-weight: 400;
+	margin-bottom: 4.5rem;
+}
+.cart-detail {
+	display: flex;
+	width: 100%;
+	margin-bottom: 2.688rem;
+}
+.cart-detail > div {
+	flex: 0 0 50%;
+	width: 100%;
+	max-width: 50%;
+}
+.cart-detail  h5 {
+	font-size: 100%;
+	font-weight: 700;
+	color: var(--black , #000000);	
+	margin: 0;
+}
+.cart-detail p {
+	margin:0.25rem 0 0;
+	color: var(--black , #000000);	
+	font-size: 87.5%;
+	line-height: normal;
+	font-weight: 400;
+}
+.pricing-detail {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+.total-amount {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+.total-amount h5 {
+	font-weight: 700;
+	color: var(--black , #000000);
+	font-size: 100%;
+	margin: 0;
+}
+.total-amount h4 {
+	font-weight: 700;
+	color: var(--black , #000000);
+	font-size: 150%;
+	margin: 0;
+}
+.coupan-pay {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.coupan-pay a {
+	font-weight: 700;
+	color: var(--sky , #02B8F9);
+	text-align:right;
+	margin-bottom: 0.625rem;
+}
+.apply_coupan .form-control{
+	background: var(--white , #ffffff);
+	border: 1px solid  var(--input-border-dark, #C9CED6);
+	box-sizing: border-box;
+}
+.apply_coupan  .btn-primary{
+	background: var(--light-sky, #53B5F3);
+}
+.apply_coupan .btn-primary:hover{
+	border-color: var(--light-sky, #53B5F3);
+	color: var(--light-sky, #53B5F3);
+	background: var(--white , #ffffff);
+}
+.payicons{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.related-course  {
+	background: var(--white , #ffffff);
+	box-shadow: 0px 24px 20px rgba(4, 15, 28, 0.2);
+	-webkit-box-shadow: 0px 24px 20px rgba(4, 15, 28, 0.2);
+	-moz-box-shadow: 0px 24px 20px rgba(4, 15, 28, 0.2);
+	border-radius: 0.375rem;
+	overflow: hidden;
+	position: relative;
+	z-index: 11;
+	max-width:316px;
+}
+.course_thumb {
+	display: flex;
+	width: 100%;
+	height: 13.625rem;
+}
+.course_thumb img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+}
+.over-btn {
+	top: 0;
+	left: 0;
+	padding:1.25rem;
+}
+.over-btn .btn-primary {
+	padding-top: 0.375rem;
+	padding-bottom: 0.375rem;
+}
+.cource_card_detail{
+	padding: 1.563rem 1.25rem;
+}
+.cource_card_detail h4{
+	margin: 0;
+	color: var(--black , #000000);
+	font-size: 125%;
+	line-height: 1.5rem;
+	font-weight: 700;
+}
+.cource_card_detail  > span {
+	margin: 0;
+	color: var(--black , #000000);
+	font-size: 87.5%;
+	line-height: 1.188rem;
+}
+.cource_card_detail p {
+	color: var(--black , #000000);
+	font-size: 87.5%;
+	line-height: 1.188rem;
+	margin: 0;	
+}
+.lession-d {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: flex-start;
+}
+.lession-d strong {
+	font-size: 87.5%;
+	line-height: 1.188rem;	
+	color: var(--black , #000000);
+	font-weight: 700;
+	margin: 0.75rem 1.75rem 1.5rem 0
+}
+/*======================
+Checkout page css style end here
+========================*/
+/*======================
+Checkout signin page css style start here
+========================*/
+.checkout-signin {
+	background: var(--light-bg ,#eef0f5);
+	padding: 	4.063rem 0;
+	min-height: calc(100vh - 80px);
+}
+.for-actor h1 {
+	margin:0 0 1.875rem ;
+	font-size: 300%;
+	font-weight: 700;
+	line-height: normal;
+	color: var(--dark-blue , #040F1C)
+}
+.for-actor p {
+	font-size: 100%;
+	line-height: normal;
+	margin: 0;
+}
+.for-actor ul {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	padding:0;
+	margin: 2.5rem  0 0;
+	list-style: none;
+
+}
+.for-actor ul li {
+	padding-left: 2.5rem;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	position: relative;
+	margin-bottom:2.5rem;
+}
+.for-actor ul li h4 {
+	font-size: 150%;
+	font-weight: 700;
+	line-height: normal;
+	color: var(--dark-blue , #040F1C);
+	margin-bottom:1.3rem;
+}
+.for-actor ul li h4 i {
+	position: absolute;
+	left: 0;
+	top: 0.525rem;
+	color: var(--sky , #02B8F9);
+}
+
+.checkout-login-form {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	background: var(--white , #ffffff);
+	border-top:0.375rem solid var(--sky , #02B8F9);
+	border-radius:0.375rem;
+	padding: 3.75rem 5.625rem;
+	box-shadow: 0px 24px 20px rgba(4, 15, 28, 0.2);
+}
+.checkout-login-form h3{
+	text-align:center;
+	color: var(--blue-text, #0A1F44);
+	font-size: 150%;
+	line-height: 1.5rem;
+	font-weight: 700;
+	margin:0 0 2.813rem;
+}
+.checkout-login-form label{
+	  margin: 0 0 0.625rem;
+	  font-weight: 700;
+	  font-size: 87.5%;
+	  color: var(--label , #364866);
+}
+.checkout-login-form > p {
+	color: var(--blue-text, #0A1F44);
+	font-size: 87.5%;
+	margin: 2rem 0 2.5rem 0 ;
+	font-weight: 600;
+}
+.checkout-login-form > h4 {
+	color: var(--label, #364866);
+	font-size: 112.5%;
+	margin:0 0 2rem 0 ;
+	font-weight: 700;
+}
+.checkout-login-form .form-control {
+	height: 50px;
+}
+.checkout-login-form .btn-primary{
+	background: var(--light-sky, #53B5F3);
+	height: 3.313rem;
+}
+.checkout-login-form .btn-primary:hover{
+	border-color: var(--light-sky, #53B5F3);
+	color: var(--light-sky, #53B5F3);
+	background: var(--white , #ffffff);
+}
+#show_hide_password {
+	position: relative;
+}
+.checkout-login-form .input-group-addon{
+    position: absolute;
+    top: 45px;
+    right: 15px;
+}
+/*======================
+Checkout signin page css style end here
+========================*/
+/*======================
+Thankyou page css style start here
+========================*/
+.thankyou{
+	background:url(../images/background-image-lori.jpg) no-repeat right 0;	
+	padding:6.125rem 0;	
+	background-size: cover;
+	min-height: calc(100vh - 80px);
+	position: relative;
+}
+.thankyou:after {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(11, 28, 47, 0.48) 0%, rgba(11, 28, 47, 0.8) 100%);
+	content: "";
+}
+.thankyou-card {
+	background: var(--white , #ffffff);
+	padding: 2.5rem 1.875rem;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	position: relative;
+	z-index: 11;
+	box-shadow: 0px 24px 20px rgba(4, 15, 28, 0.2);
+	border-radius: 0.375rem;
+}
+.thankyou-card  h3 {
+	font-size: 250%;
+	line-height: 2.75rem;
+	color: var(--black  , #000000)
+	margin:0;
+	font-weight: 700;
+	
+}
+.thankyou-card  p{
+	margin: 0;
+	color: var(--dark-blue , #040F1C);
+	font-size: 112.5%;
+	line-height: 1.5rem;
+}
+.thankyou-card  > a {
+	font-weight: 700;
+	font-size: 112.5%;
+	line-height: 1.5rem;
+}
+.thankyou-card .btn-primary {
+	margin-top: 1.25rem;
+	font-size: 87.5%;
+}
+
+/*======================
+Thankyou page css style end here
+========================*/
+/*======================
+Lesson page css style start here
+========================*/
+.lessons.rec_box {
+    height: 342px;
+    margin-bottom: 30px;
+    max-height: unset;
+}
+/*======================
+Lesson page css style end here
+========================*/
