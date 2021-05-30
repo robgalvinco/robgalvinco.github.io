@@ -1,0 +1,264 @@
+/*======================
+workflow: Foundr Cards
+Theme version : 1.0.0
+========================*/
+
+/*======================
+Global style start here
+========================*/
+:root{ 
+	--white: #FFFFFF;
+	--red: #ff0042;
+	--blue:#01d;
+	--secondary:#1D1E1B;
+	--black: #000000;
+	--darkgrey: #ededed;
+
+}
+/*======================
+Global style End here
+========================*/
+ 
+.btn-card-play {
+    border-radius: 50%;
+    background-color: var(--red, #ff0042);
+    width: 50px;
+    height: 50px;
+    padding-left: 17px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    -webkit-animation-name: pulseButton;
+    animation-name: pulseButton;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+}
+.btn-card-play img {
+	max-width: 15px;
+}
+ .btn-card-play:before {
+    content: "";
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-color: var(--red, #ff0042);
+    opacity: .5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border-radius: 100px;
+    z-index: -1;
+    -webkit-animation-name: pulseTwo;
+    animation-name: pulseTwo;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+}
+@-webkit-keyframes pulseAnimate {
+    0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+50% {
+    -webkit-transform: scale(1.8);
+    transform: scale(1.8);
+    opacity: 0;
+}
+to {
+    opacity: 0;
+}
+}@keyframes pulseAnimate {
+    0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+50% {
+    -webkit-transform: scale(1.8);
+    transform: scale(1.8);
+    opacity: 0;
+}
+to {
+    opacity: 0;
+}
+}
+@-webkit-keyframes pulseTwo {
+    0% {
+    width: 100%;
+    height: 100%}
+40% {
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+}
+to {
+    width: calc(100% + 70px);
+    height: calc(100% + 70px);
+    opacity: 0;
+}
+}@keyframes pulseTwo {
+    0% {
+    width: 100%;
+    height: 100%}
+40% {
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+}
+to {
+    width: calc(100% + 70px);
+    height: calc(100% + 70px);
+    opacity: 0;
+}
+}
+@-webkit-keyframes pulseButton {
+    0% {
+    -webkit-box-shadow: 0;
+    box-shadow: 0;
+}
+40% {
+    -webkit-box-shadow: 0 0 0 20px rgba(255, 0, 66, .7);
+    box-shadow: 0 0 0 20px rgba(255, 0, 66, .7);
+}
+to {
+    -webkit-box-shadow: 0 0 0 25px transparent;
+    box-shadow: 0 0 0 25px transparent;
+}
+}@keyframes pulseButton {
+    0% {
+    -webkit-box-shadow: 0;
+    box-shadow: 0;
+}
+40% {
+    -webkit-box-shadow: 0 0 0 20px rgba(255, 0, 66, .7);
+    box-shadow: 0 0 0 20px rgba(255, 0, 66, .7);
+}
+to {
+    -webkit-box-shadow: 0 0 0 25px transparent;
+    box-shadow: 0 0 0 25px transparent;
+}
+}@-webkit-keyframes pulseTwo {
+    0% {
+    width: 100%;
+    height: 100%}
+40% {
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+}
+to {
+    width: calc(100% + 70px);
+    height: calc(100% + 70px);
+    opacity: 0;
+}
+}
+.course-cards {
+	/* background: var(--darkgrey, #ededed); */
+	padding: 100px 0;
+}
+.course-cards .card {
+	border-radius:0;
+	border:none;
+	height: 100%;
+}
+.course-cards .video-parent {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 240px;
+}
+.course-cards .card-img {
+	width: 100%;
+	height: 100%;
+	border-radius :0;
+	object-fit: cover;
+}
+.course-cards .btn-card-group .btn-card-primary {
+	background: var(--red, #ff0042);
+	border-color: var(--red, #ff0042);
+	
+}
+.course-cards .btn-card-group .btn-card-secondary  {
+	background: var(--secondary,#1D1E1B);
+	border-color: var(--secondary,#1D1E1B);
+	
+}
+.course-cards .card .btn-card-group  .btn-card {
+	border-radius: 0;
+	text-transform: uppercase;
+	font-size: 14px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	margin-left: 0;
+	font-weight: 700;
+	width: 100%;
+	max-width: unset;
+}
+.course-cards .card-title a {
+	color: var(--secondary,#1D1E1B);
+	font-size:25px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.course-cards .card-text {
+	font-size: 14px;
+	color: var(--secondary,#1D1E1B);
+	font-weight: 400;
+	line-height: 1.3em;
+}
+.course-cards  strong {
+ font-size: 14px;
+ margin-top: auto;
+}
+.course-cards  .col-lg-4 {
+	margin-bottom: 30px;
+}
+.course-cards .card-body {
+	display: flex;
+	flex-direction: column;
+}
+@media(min-width: 1360px){
+	.container {
+		max-width: 1300px;
+	}
+}
+.video-toggle {
+	width: 100%;
+}
+.video-toggle  iframe {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: relative;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	border:none;
+	padding: 0;
+	margin: 0;
+}
+.video-parent.active img{
+	display: none;
+}
+.video-parent.active iframe {
+	opacity: 1;
+}
