@@ -17,6 +17,36 @@
         <link rel="stylesheet" type="text/css" href="css/theme-vendors.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        <style>
+            .bg-transparent-gradient-light-red-orange {
+                background-image: linear-gradient(to right top, #dc3545, rgba(251,111,86,0));
+            }   
+            .nav-item.dropdown.megamenu:nth-child(2) .menu-back-div {
+                padding: 20px;
+            }
+            .nav-item.dropdown.megamenu:nth-child(2) .menu-back-div ul[class *="d-"]:last-child {
+                padding-right: 10px;
+                margin-top: 0px;
+            }
+            .nav-item.dropdown.megamenu:nth-child(2) .menu-back-div .col:last-child, .nav-item.dropdown.megamenu:nth-child(2) .menu-back-div ul[class *="d-"]:last-child {
+                padding-right: 0;
+                margin: 0;
+                display: flex !important;
+            }
+            .nav-item.dropdown.megamenu:nth-child(2) .menu-back-div li {
+                width: 150px;
+                padding:15px;
+            }
+            .nav-item.dropdown.megamenu:nth-child(2) .menu-back-div .blog-grid{
+            flex-direction:column;
+            }
+            .nav-item.dropdown.megamenu:nth-child(2) .blog-grid .avtar-image {
+                width:120px !important;
+            }
+            .nav-item.dropdown.megamenu:nth-child(2) .blog-grid .text-small {
+                margin-left:auto !important;
+            }                           
+        </style>
     </head>
     <body data-mobile-nav-style="classic">
         <header>
@@ -183,10 +213,21 @@
             </div>
         </header>
         <!-- end header -->
+        
         <!-- start section -->
         <section class="parallax bg-extra-dark-gray p-0" data-parallax-background-ratio="0.5" style="background-image:url('https://source.unsplash.com/1920x1080/?art,paintings');">
             <div class="opacity-extra-medium bg-black"></div>
-            <div class="container position-relative">
+            <div class="container-fluid position-relative padding-5-half-rem-tb  ">
+                <div class=" justify-content-center justify-content-md-start d-flex">
+                    <div class="align-self-center bg-white w-40 lg-w-40 sm-w-70 xs-w-85 padding-7-rem-lr padding-5-half-rem-tb xl-padding-4-rem-lr lg-padding-2-half-rem-lr lg-padding-3-half-rem-tb xs-padding-3-half-rem-all margin-8-rem-left md-margin-6-rem-left sm-no-margin-left box-shadow-extra-large text-center text-sm-left">
+                        <a href="#" class="alt-font font-weight-500 text-extra-dark-gray text-black-hover text-medium letter-spacing-2px text-uppercase d-inline-block position-relative z-index-1 margin-25px-bottom xs-margin-20px-bottom"><span class="position-absolute left-0px bottom-2px w-100 h-5px bg-transparent-gradient-light-red-orange d-block z-index-minus-1"></span>Today's the Day</a>
+                        <h4 class="alt-font font-weight-500 text-extra-dark-gray margin-35px-bottom letter-spacing-minus-2px"><a href="blog-post-layout-01.html" class="text-extra-dark-gray text-black-hover">Unleash your creativity with an immersive learning experience that will further your growth both personally and professionally.</a></h4>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-12 col-xl-8 col-md-10 col-lg-8 full-screen flex-column d-flex justify-content-center text-center md-landscape-h-600px z-index-0">
                         <div class="bg-dark-red border-radius-6px padding-7-half-rem-all lg-padding-4-half-rem-all xs-padding-2-rem-all tilt-box" data-tilt-options='{ "maxTilt": 20, "perspective": 1000, "easing": "cubic-bezier(.03,.98,.52,.99)", "scale": 1, "speed": 500, "transition": true, "reset": true, "glare": false, "maxGlare": 1 }'>
@@ -257,7 +298,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
         <div class="box-layout">
             <!-- start section -->
@@ -265,7 +306,7 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-12 col-sm-6 text-center margin-4-rem-bottom">
-                            <span class="w-2px h-35px bg-neon-orange d-inline-block margin-5px-bottom"></span>
+                            <span class="w-2px h-35px bg-dark-red d-inline-block margin-5px-bottom"></span>
                             <h5 class="alt-font letter-spacing-minus-1px text-extra-dark-gray font-weight-500">Choose a category
                                 to start learning.</h5>
                         </div>
@@ -347,7 +388,7 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-12 col-sm-6 text-center margin-4-rem-bottom">
-                            <span class="w-2px h-35px bg-neon-orange d-inline-block margin-5px-bottom"></span>
+                            <span class="w-2px h-35px bg-dark-red d-inline-block margin-5px-bottom"></span>
                             <h5 class="alt-font letter-spacing-minus-1px text-extra-dark-gray font-weight-500">Classes from your favorite creators.</h5>
                         </div>
                     </div>
@@ -430,7 +471,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-sm-6 text-center margin-4-rem-bottom">
-                        <span class="w-2px h-35px bg-neon-orange d-inline-block margin-5px-bottom"></span>
+                        <span class="w-2px h-35px bg-dark-red d-inline-block margin-5px-bottom"></span>
                         <h5 class="alt-font letter-spacing-minus-1px text-extra-dark-gray font-weight-500">Latest Courses</h5>
                     </div>
                 </div>
@@ -526,7 +567,7 @@
         <!-- start section -->
         <section class="bg-light-gray overflow-visible position-relative pt-0 pb-md-0">
             <div class="container">
-                <div class="z-index-6 bg-neon-orange border-radius-6px padding-55px-tb overlap-section-bottom md-padding-40px-all xs-padding-20px-lr">
+                <div class="z-index-6 bg-dark-red border-radius-6px padding-55px-tb overlap-section-bottom md-padding-40px-all xs-padding-20px-lr">
                     <div class="row align-items-center justify-content-center">
                         <div class="col-12 col-lg-5 md-margin-30px-bottom">
                             <h5 class="alt-font font-weight-300 text-white w-90 mb-0 lg-w-100"><span class="font-weight-600">Join our newsletter</span> and get 15% sale discount</h5>
